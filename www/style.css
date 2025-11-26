@@ -17,6 +17,43 @@ body {
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
     justify-items: center;
+    justify-content: center;
+}
+
+/* Tablet Mode (3 per row) */
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .item-card {
+        width: 260px;
+        height: 420px;
+    }
+}
+
+/* Large Phones (2 per row) */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .item-card {
+        width: 240px;
+        height: 400px;
+    }
+}
+
+/* Small Phones (1 per row) */
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .item-card {
+        width: 90%;
+        height: 390px;
+    }
 }
 
 /* BIGGER CARDS TO MATCH HOT WHEELS DIMENSIONS */
@@ -74,4 +111,50 @@ body {
     color: #00ff6a;
     margin: 0;
     font-size: 18px;
+}
+
+/* Button Layout */
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+/* Add to Cart Button */
+.cart-btn {
+    width: 48%;
+    padding: 10px 0;
+    background: #2a2a2a; /* Dark grey like chat UI */
+    border: 2px solid #00ff6a;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.25s ease-in-out;
+}
+
+/* Hover Glow for Add to Cart */
+.cart-btn:hover {
+    box-shadow: 0px 0px 10px #00ff6a, 0px 0px 20px #00ff6a;
+    transform: scale(1.03);
+}
+
+/* Buy Now Button */
+.buy-btn {
+    width: 48%;
+    padding: 10px 0;
+    background: #00ff6a;
+    border: none;
+    color: #0f0f0f;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.25s ease-in-out;
+}
+
+/* Neon Hover Effect */
+.buy-btn:hover {
+    box-shadow: 0px 0px 10px #00ff6a, 0px 0px 20px #00ff6a, 0px 0px 40px #00ff6a;
+    transform: scale(1.05);
 }
