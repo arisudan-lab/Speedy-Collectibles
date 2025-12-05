@@ -3,12 +3,12 @@
         "id": 1,
         "name": "MAZDA RX7 FC PANDEM",
         "price": 999,
-        "image_url": "/images/car1.jpeg"
+        "image_url": "http://127.0.0.1:8000/images/car1.jpeg"
     },
     {
         "id": 2,
         "name": "NISSAN GTR R35",
         "price": 1299,
-        "image_url": "/images/car2.png"
+        "image_url": "http://127.0.0.1:8000/images/car2.png"
     }
 ]
