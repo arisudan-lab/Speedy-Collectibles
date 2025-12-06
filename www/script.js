@@ -23,6 +23,14 @@ function updateCartCount() {
     document.querySelector(".cart-count").textContent = count;
 }
 
+function updateCartTotal() {
+    const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    const totalEl = document.querySelector(".cart-total");
+    if (totalEl) {
+        totalEl.textContent = "Total: ₹" + total;
+    }
+}
+
 function renderCartItems() {
     const cartItemsContainer = document.querySelector(".cart-items");
     cartItemsContainer.innerHTML = "";
@@ -30,6 +38,7 @@ function renderCartItems() {
     if (cart.length === 0) {
         cartItemsContainer.innerHTML =
             '<p class="empty-text">Your cart is empty 🛒</p>';
+        updateCartTotal();
         return;
     }
 
@@ -37,24 +46,31 @@ function renderCartItems() {
         const row = document.createElement("div");
         row.className = "cart-item-row";
         row.style.display = "flex";
-        row.style.justifyContent = "space-between";
         row.style.alignItems = "center";
-        row.style.marginBottom = "10px";
+        row.style.justifyContent = "space-between";
+        row.style.marginBottom = "12px";
+        row.style.gap = "10px";
 
         row.innerHTML = `
-      <div>
-        <strong>${item.name}</strong><br>
-        Qty: ${item.quantity} · ₹${item.price}
-      </div>
-      <button data-index="${index}" class="remove-item-btn" style="
-        background:#ff4d4d;
-        border:none;
-        color:white;
-        border-radius:6px;
-        padding:4px 8px;
-        cursor:pointer;
-        font-size:12px;
-      ">Remove</button>
+        <div style="display:flex; align-items:center; gap:10px;">
+            <img src="${item.image_url}" alt="${item.name}"
+                style="width:50px; height:50px; object-fit:cover; border-radius:6px;">
+            <div>
+            <strong>${item.name}</strong><br>
+            <span style="font-size:12px; opacity:.8;">
+                Qty: ${item.quantity} · ₹${item.price}
+            </span>
+            </div>
+        </div>
+        <button data-index="${index}" class="remove-item-btn" style="
+            background:#ff4d4d;
+            border:none;
+            color:white;
+            border-radius:6px;
+            padding:4px 8px;
+            cursor:pointer;
+            font-size:12px;
+        ">Remove</button>
     `;
 
         cartItemsContainer.appendChild(row);
@@ -70,6 +86,8 @@ function renderCartItems() {
             renderCartItems();
         });
     });
+
+    updateCartTotal();
 }
 
 function addToCart(product) {
@@ -77,7 +95,14 @@ function addToCart(product) {
     if (existing) {
         existing.quantity += 1;
     } else {
-        cart.push({ ...product, quantity: 1 });
+        // include image_url so we can show image in cart
+        cart.push({
+            id: product.id,
+            name: product.name || product.title || product.name,
+            price: product.price,
+            image_url: product.image_url,
+            quantity: 1,
+        });
     }
     saveCart();
     updateCartCount();
@@ -128,4 +153,3 @@ async function loadProducts() {
 loadProducts();
 updateCartCount();
 renderCartItems();
-
