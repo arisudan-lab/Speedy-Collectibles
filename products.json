@@ -3,7 +3,7 @@
         "id": 1,
         "name": "2020 JEEP GLADIATOR",
         "price": 999,
-        "image_url": "http://127.0.0.1:8000/images/car1.jpeg"
+        "image_url": "http://127.0.0.1:8000/images/car1~.jpeg"
     },
     {
         "id": 2,
@@ -19,7 +19,7 @@
     },
     {
         "id": 4,
-        "name": "ERROR",
+        "name": "IMPORTED FROM JAPAN",
         "price": 1299,
         "image_url": "http://127.0.0.1:8000/images/car4.jpeg"
     },
