@@ -109,9 +109,13 @@ function addToCart(product) {
     renderCartItems();
 }
 
+// after backend is live on Render, replace with your actual URL
+const API_BASE = "https://YOUR-RENDER-SERVICE.onrender.com";
+
+
 // ---------- LOAD PRODUCTS FROM FASTAPI ----------
 async function loadProducts() {
-    const res = await fetch("/products");
+    const res = await fetch(`${API_BASE}/products`);
     const products = await res.json();
 
     const grid = document.getElementById("products-grid");
