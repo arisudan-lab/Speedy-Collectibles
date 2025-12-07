@@ -3,66 +3,66 @@
         "id": 1,
         "name": "2020 JEEP GLADIATOR",
         "price": 999,
-        "image_url": "http://127.0.0.1:8000/images/car1~.jpeg"
+        "image_url": "/images/car1~.jpeg"
     },
     {
         "id": 2,
         "name": "MAZDA RX7 FC PANDEM",
         "price": 1299,
-        "image_url": "http://127.0.0.1:8000/images/car2.jpeg"
+        "image_url": "/images/car2.jpeg"
     },
     {
         "id": 3,
         "name": "2023 NISSAN Z GTR4",
         "price": 1299,
-        "image_url": "http://127.0.0.1:8000/images/car3.jpeg"
+        "image_url": "/images/car3.jpeg"
     },
     {
         "id": 4,
         "name": "IMPORTED FROM JAPAN",
         "price": 1299,
-        "image_url": "http://127.0.0.1:8000/images/car4.jpeg"
+        "image_url": "/images/car4.jpeg"
     },
     {
         "id": 5,
         "name": "LB-WORK McLAREN 720S",
         "price": 1299,
-        "image_url": "http://127.0.0.1:8000/images/car5.jpeg"
+        "image_url": "/images/car5.jpeg"
     },
     {
         "id": 6,
         "name": "JACKSON STORM",
         "price": 1299,
-        "image_url": "http://127.0.0.1:8000/images/car6.jpeg"
+        "image_url": "/images/car6.jpeg"
     },
     {
         "id": 7,
         "name": "BACK to the FUTURE ...",
         "price": 1299,
-        "image_url": "http://127.0.0.1:8000/images/car7.jpeg"
+        "image_url": "/images/car7.jpeg"
     },
     {
         "id": 8,
         "name": "ACTION COMICS #1 - ACTION SEDAN",
         "price": 1299,
-        "image_url": "http://127.0.0.1:8000/images/car8.jpeg"
+        "image_url": "/images/car8.jpeg"
     },
     {
         "id": 9,
         "name": "KOOL KOMBI",
         "price": 1299,
-        "image_url": "http://127.0.0.1:8000/images/car9.jpeg"
+        "image_url": "/images/car9.jpeg"
     },
     {
         "id": 10,
         "name": "NISSAN SKYLINE GT-R (BNR34)",
         "price": 1299,
-        "image_url": "http://127.0.0.1:8000/images/car10.jpeg"
+        "image_url": "/images/car10.jpeg"
     },
     {
         "id": 11,
         "name": "HW TOUR BUS",
         "price": 1299,
-        "image_url": "http://127.0.0.1:8000/images/car11.jpeg"
+        "image_url": "/images/car11.jpeg"
     }
 ]

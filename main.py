@@ -17,7 +17,7 @@ app.add_middleware(
 
 # ------- Paths -------
 BASE_DIR = Path(__file__).resolve().parent
-IMAGE_DIR = BASE_DIR / "www" / "images"
+IMAGE_DIR = BASE_DIR / "images"
 PRODUCTS_JSON = BASE_DIR / "products.json"
 
 # ------- Static files (Images) -------
