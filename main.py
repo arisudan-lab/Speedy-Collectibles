@@ -27,13 +27,13 @@ app.mount("/images", StaticFiles(directory=IMAGE_DIR), name="images")
 # ------- API Routes -------
 @app.get("/")
 async def home():
-    return {"message": "FastAPI is running 🚀"}
+    return {"message": "FastAPI is running "}
 
 
 @app.get("/products")
 async def get_products():
     if not PRODUCTS_JSON.exists():
-        return {"error": "products.json missing 💀"}
+        return {"error": "products.json missing "}
 
     try:
         with open(PRODUCTS_JSON, "r", encoding="utf-8") as file:
