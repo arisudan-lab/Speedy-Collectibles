@@ -64,5 +64,11 @@
         "name": "HW TOUR BUS",
         "price": 1299,
         "image_url": "/images/car11.jpeg"
+    },
+    {
+        "id": 12,
+        "name": "PORSCHE 935",
+        "price": 1299,
+        "image_url": "/images/car12.jpeg"
     }
 ]
