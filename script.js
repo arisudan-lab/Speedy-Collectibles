@@ -110,8 +110,7 @@ function addToCart(product) {
 }
 
 // after backend is live on Render, replace with your actual URL
-const API_BASE = "https://YOUR-RENDER-SERVICE.onrender.com";
-
+const API_BASE = "https://speedy-collectibles.onrender.com";
 
 // ---------- LOAD PRODUCTS FROM FASTAPI ----------
 async function loadProducts() {
